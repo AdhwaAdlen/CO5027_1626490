@@ -22,7 +22,7 @@
         <asp:RequiredFieldValidator ID="reqBodyField" runat="server" ErrorMessage="Body field is required" ControlToValidate="txtSubject" Display="None"></asp:RequiredFieldValidator>
         <br />
         <br />
-        <asp:Button ID="btnSendEmail" runat="server" Text="Send Email" />
+        <asp:Button ID="btnSendEmail" runat="server" Text="Send Email" OnClick="btnSendEmail_Click" />
         <br />
         <br />
         <asp:Literal ID="litResult" runat="server"></asp:Literal>
