@@ -11,7 +11,7 @@ namespace WinterJacket_Assignment
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            //Sends email using a mail server that
+            //Sends email using a mail server that requires login credentials
         }
 
         protected void btnSendEmail_Click(object sender, EventArgs e)
