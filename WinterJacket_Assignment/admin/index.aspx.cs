@@ -20,5 +20,10 @@ namespace WinterJacket_Assignment.admin
             HttpContext.Current.GetOwinContext().Authentication.SignOut(DefaultAuthenticationTypes.ApplicationCookie);
             Response.Redirect("~/Login.aspx");
         }
+
+        protected void btnProductList_Click(object sender, EventArgs e)
+        {
+            
+        }
     }
 }

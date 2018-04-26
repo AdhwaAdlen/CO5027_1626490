@@ -31,7 +31,7 @@ namespace WinterJacket_Assignment
             smtpClient.EnableSsl = true;
 
             //Create credentials - e.g. username and password for the account
-            System.Net.NetworkCredential credentials = new System.Net.NetworkCredential("nuradhwaadlen.sapawi@gmail.com", "password");
+            System.Net.NetworkCredential credentials = new System.Net.NetworkCredential("nuradhwaadlen.sapawi@gmail.com", "22893adlensapawi");
             smtpClient.Credentials = credentials;
 
             try

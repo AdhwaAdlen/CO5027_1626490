@@ -139,11 +139,14 @@
     <Content Include="Contact.aspx" />
     <Content Include="css\Styles.css" />
     <Content Include="Default.aspx" />
+    <Content Include="images\1.jpg" />
+    <Content Include="images\2.jpg" />
     <Content Include="login.aspx" />
     <Content Include="packages.config" />
     <Content Include="register.aspx" />
     <Content Include="Site.Master" />
     <Content Include="admin\Web.config" />
+    <None Include="Properties\PublishProfiles\new.pubxml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
