@@ -34,10 +34,14 @@
     <div id="menu">
         <ul>
             <li><a href="~/Default.aspx" runat="server">Home</a></li>
+            <li><a href="~/Product.aspx" runat="server">Product</a></li>
             <li><a href="~/login.aspx" runat="server">Login</a></li>
             <li><a href="~/register.aspx" runat="server">Register</a></li>
             <li><a href="~/contact.aspx" runat="server">Contact Us</a></li>
             <li><a href="~/admin/index.aspx" runat="server">Admin</a></li>
+            
+            
+            
         </ul>
     </div>
 

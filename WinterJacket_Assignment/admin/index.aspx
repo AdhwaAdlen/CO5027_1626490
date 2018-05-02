@@ -10,8 +10,8 @@
 <asp:Content ID="Content4" ContentPlaceHolderID="maincontent" runat="server">
     <form id="form1" runat="server">
         <asp:Button ID="btnProductList" runat="server" Text="Product List" OnClick="btnProductList_Click" />
-        <asp:Button ID="Button2" runat="server" Text="Button" />
-        <asp:Button ID="Button1" runat="server" Text="Button" />
+        <asp:Button ID="btnAdd" runat="server" Text="Add Product" OnClick="btnAdd_Click" />
+        <asp:Button ID="btnEdit" runat="server" Text="Edit Product" OnClick="btnEdit_Click" />
         <asp:Button ID="btnLogout" runat="server" Text="Logout" OnClick="btnLogout_Click" />
     </form>
 </asp:Content>

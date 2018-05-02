@@ -29,6 +29,12 @@
                 ImageLink:
                 <asp:TextBox ID="ImageLinkTextBox" runat="server" Text='<%# Bind("ImageLink") %>' />
                 <br />
+                <asp:FileUpload ID="FileUpload1" runat="server" />
+                <br />
+                <asp:LinkButton ID="LinkButton1" runat="server">LinkButton</asp:LinkButton>
+                <br />
+                <asp:Label ID="Label1" runat="server" Text='<%# Bind("ImageLink") %>'></asp:Label>
+                <br />
                 <asp:LinkButton ID="UpdateButton" runat="server" CausesValidation="True" CommandName="Update" Text="Update" />
                 &nbsp;<asp:LinkButton ID="UpdateCancelButton" runat="server" CausesValidation="False" CommandName="Cancel" Text="Cancel" />
             </EditItemTemplate>

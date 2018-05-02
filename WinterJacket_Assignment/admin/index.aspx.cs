@@ -25,5 +25,15 @@ namespace WinterJacket_Assignment.admin
         {
             Response.Redirect("list.aspx");
         }
+
+        protected void btnAdd_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("Add.aspx");
+        }
+
+        protected void btnEdit_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("Edit.aspx");
+        }
     }
 }
