@@ -29,7 +29,7 @@
                     </tr>
                 </table>
             </ItemTemplate>
-
+            
             <FooterTemplate></ul></FooterTemplate>
         </asp:Repeater>
         <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:db_1626490_co5027_asgConnectionString %>" SelectCommand="SELECT * FROM [tblProduct] WHERE ([ProductID] = @ProductID)" ConflictDetection="CompareAllValues" ProviderName="<%$ ConnectionStrings:db_1626490_co5027_asgConnectionString.ProviderName %>" OldValuesParameterFormatString="original_{0}">
