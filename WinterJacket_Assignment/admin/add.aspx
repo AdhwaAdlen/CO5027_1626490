@@ -35,6 +35,8 @@
                 <br />
                 <asp:Label ID="Label1" runat="server" Text='<%# Bind("ImageLink") %>'></asp:Label>
                 <br />
+                <asp:Image ID="Image1" runat="server" />
+                <br />
                 <asp:LinkButton ID="UpdateButton" runat="server" CausesValidation="True" CommandName="Update" Text="Update" />
                 &nbsp;<asp:LinkButton ID="UpdateCancelButton" runat="server" CausesValidation="False" CommandName="Cancel" Text="Cancel" />
             </EditItemTemplate>
