@@ -23,7 +23,7 @@ namespace WinterJacket_Assignment.admin
 
         protected void btnProductList_Click(object sender, EventArgs e)
         {
-            
+            Response.Redirect("list.aspx");
         }
     }
 }
