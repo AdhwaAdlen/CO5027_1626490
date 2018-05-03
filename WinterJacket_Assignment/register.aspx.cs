@@ -24,10 +24,8 @@ namespace WinterJacket_Assignment
             var userStore = new UserStore<IdentityUser>(identityDbContext);
             var manager = new UserManager<IdentityUser>(userStore);
 
-            //IdentityRole adminRole = new IdentityRole("RegisteredUser");
-            //lapas register for admin, kau comment  yg identityRole admin tu and uncomment identityRole RegisteredUser untuk user saja
-            // so klau user register ya inda dapat ke admin page, admin saja ada permission untuk masuk ke admin page
-            IdentityRole adminRole = new IdentityRole("Admin");
+            IdentityRole adminRole = new IdentityRole("RegisteredUser");
+            //IdentityRole adminRole = new IdentityRole("Admin");
             roleManager.Create(adminRole);
             var user = new IdentityUser()
             {
@@ -38,11 +36,10 @@ namespace WinterJacket_Assignment
             IdentityResult result = manager.Create(user, txtRegPassword.Text);
             if(result.Succeeded)
             {
-                //manager.AddToRole(user.Id, "RegisteredUser");
-                //lapas register for admin, kau comment  yg identityRole admin tu and uncomment identityRole RegisteredUser untuk user saja
-                // so klau user register ya inda dapat ke admin page, admin saja ada permission untuk masuk ke admin page
-                manager.AddToRole(user.Id, "Admin");
+                manager.AddToRole(user.Id, "RegisteredUser");
+                //manager.AddToRole(user.Id, "Admin");
                 manager.Update(user);
+
                 litRegisterError.Text = "Registration Successful";
             }
             else

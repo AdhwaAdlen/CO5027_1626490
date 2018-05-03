@@ -54,7 +54,8 @@
             &nbsp;<asp:LinkButton ID="InsertCancelButton" runat="server" CausesValidation="False" CommandName="Cancel" Text="Cancel" />
         </InsertItemTemplate>
         <ItemTemplate>
-            <asp:Image ID="CurrentImage" runat="server" ImageUrl='<%# Eval("ImageLink") %>' Height="200px" Width="200px"/><br />
+            <asp:Image ID="CurrentImage" runat="server" ImageUrl='<%# Eval("ImageLink") %>' Width="200px" Height="200px" /><br />
+            <br />
             ProductID:
             <asp:Label ID="ProductIDLabel" runat="server" Text='<%# Eval("ProductID") %>' />
             <br />
@@ -70,13 +71,18 @@
             ProductPrice:
             <asp:Label ID="ProductPriceLabel" runat="server" Text='<%# Bind("ProductPrice") %>' />
             <br />
+
             ImageLink:
             <asp:Label ID="ImageLinkLabel" runat="server" Text='<%# Bind("ImageLink") %>' />
             <br />
 
         </ItemTemplate>
         </asp:FormView>
-        <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:db_1626490_co5027_asgConnectionString %>" SelectCommand="SELECT * FROM [tblProduct]"></asp:SqlDataSource>
+        <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:db_1626490_co5027_asgConnectionString %>" SelectCommand="SELECT * FROM [tblProduct] WHERE ([ProductID] = @ProductID)">
+            <SelectParameters>
+                <asp:QueryStringParameter Name="ProductID" QueryStringField="Id" Type="Int32" />
+            </SelectParameters>
+        </asp:SqlDataSource>
             <asp:Label ID="lblQuantity" runat="server" Text="Quantity"></asp:Label>
             <asp:DropDownList ID="ddlQuantity" runat="server" OnSelectedIndexChanged="ddlQuantity_SelectedIndexChanged">
             <asp:ListItem Selected="True">1</asp:ListItem>

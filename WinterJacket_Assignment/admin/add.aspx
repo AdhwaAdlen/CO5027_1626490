@@ -29,15 +29,8 @@
                 ImageLink:
                 <asp:TextBox ID="ImageLinkTextBox" runat="server" Text='<%# Bind("ImageLink") %>' />
                 <br />
-                <asp:FileUpload ID="FileUpload1" runat="server" />
-                <br />
-                <asp:LinkButton ID="LinkButton1" runat="server">LinkButton</asp:LinkButton>
-                <br />
-                <asp:Label ID="Label1" runat="server" Text='<%# Bind("ImageLink") %>'></asp:Label>
-                <br />
-                <asp:Image ID="Image1" runat="server" />
-                <br />
-                <asp:LinkButton ID="UpdateButton" runat="server" CausesValidation="True" CommandName="Update" Text="Update" />
+               
+                <asp:LinkButton ID="UpdateButton" runat="server" CausesValidation="True" CommandName="Update" Text="Update"></asp:LinkButton>
                 &nbsp;<asp:LinkButton ID="UpdateCancelButton" runat="server" CausesValidation="False" CommandName="Cancel" Text="Cancel" />
             </EditItemTemplate>
             <InsertItemTemplate>
@@ -57,7 +50,12 @@
                 <asp:TextBox ID="ProductPriceTextBox" runat="server" Text='<%# Bind("ProductPrice") %>' />
                 <br />
                 ImageLink:
-                <asp:TextBox ID="ImageLinkTextBox" runat="server" Text='<%# Bind("ImageLink") %>' />
+                <br />
+                <asp:FileUpload ID="FileUpload1" runat="server" />
+                <br />
+                <asp:LinkButton ID="Savebtn" runat="server">Save Image</asp:LinkButton>
+                <br />
+                <asp:Label ID="Label1" runat="server" Text='<%# Bind("ImageLink") %>'></asp:Label>
                 <br />
                 <asp:LinkButton ID="InsertButton" runat="server" CausesValidation="True" CommandName="Insert" Text="Insert" />
                 &nbsp;<asp:LinkButton ID="InsertCancelButton" runat="server" CausesValidation="False" CommandName="Cancel" Text="Cancel" />

@@ -11,7 +11,10 @@ namespace WinterJacket_Assignment
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            string productId = Request.QueryString["Id"];
+            string filename = productId + ".jpg";
 
+            //CurrentImage.ImageUrl = "~/admin/ProductImages/" + filename;
         }
 
         protected void ddlQuantity_SelectedIndexChanged(object sender, EventArgs e)
