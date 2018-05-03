@@ -75,7 +75,13 @@
             ImageLink:
             <asp:Label ID="ImageLinkLabel" runat="server" Text='<%# Bind("ImageLink") %>' />
             <br />
-
+            <br />
+            <asp:Label ID="lblQuantity" runat="server" Text="Quantity"></asp:Label>
+            <asp:DropDownList ID="ddlQuantity" runat="server" OnSelectedIndexChanged="ddlQuantity_SelectedIndexChanged">
+            <asp:ListItem Selected="True">1</asp:ListItem>
+            <asp:ListItem>2</asp:ListItem>
+            <asp:ListItem>3</asp:ListItem>
+            </asp:DropDownList>
         </ItemTemplate>
         </asp:FormView>
         <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:db_1626490_co5027_asgConnectionString %>" SelectCommand="SELECT * FROM [tblProduct] WHERE ([ProductID] = @ProductID)">
@@ -83,12 +89,7 @@
                 <asp:QueryStringParameter Name="ProductID" QueryStringField="Id" Type="Int32" />
             </SelectParameters>
         </asp:SqlDataSource>
-            <asp:Label ID="lblQuantity" runat="server" Text="Quantity"></asp:Label>
-            <asp:DropDownList ID="ddlQuantity" runat="server" OnSelectedIndexChanged="ddlQuantity_SelectedIndexChanged">
-            <asp:ListItem Selected="True">1</asp:ListItem>
-            <asp:ListItem>2</asp:ListItem>
-            <asp:ListItem>3</asp:ListItem>
-            </asp:DropDownList>
+            
         <br />
         <br />
         <asp:Button ID="btnPurchase" runat="server" Text="Buy Now" OnClick="btnPurchase_Click" />
