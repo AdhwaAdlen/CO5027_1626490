@@ -4,7 +4,7 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="heading1" runat="server">
 </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="heading2" runat="server">
-    Edit
+    E D I T
 </asp:Content>
 <asp:Content ID="Content4" ContentPlaceHolderID="maincontent" runat="server">
 

@@ -154,7 +154,17 @@
     <Content Include="Contact.aspx" />
     <Content Include="css\Styles.css" />
     <Content Include="Default.aspx" />
+    <Content Include="Images\b1.jpg" />
+    <Content Include="Images\b2.jpg" />
+    <Content Include="Images\b3.jpg" />
+    <Content Include="Images\b5.jpg" />
+    <Content Include="Images\b7.jpg" />
+    <Content Include="Images\b8.jpg" />
     <Content Include="Images\background_image.jpg" />
+    <Content Include="Images\banner.jpg" />
+    <Content Include="Images\banner22.jpg" />
+    <Content Include="Images\banner5.jpg" />
+    <Content Include="Images\banner8.jpg" />
     <Content Include="login.aspx" />
     <Content Include="packages.config" />
     <Content Include="Product.aspx" />

@@ -1,14 +1,17 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Product.aspx.cs" Inherits="WinterJacket_Assignment.Product" %>
+﻿<%@ Page Title="Winter Jacket Michael Kors" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Product.aspx.cs" Inherits="WinterJacket_Assignment.Product" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="title" runat="server">
 </asp:Content>
+
 <asp:Content ID="Content2" ContentPlaceHolderID="heading1" runat="server">
 </asp:Content>
+
 <asp:Content ID="Content3" ContentPlaceHolderID="heading2" runat="server">
-    Product Details
+    P R O D U C T&nbsp;&nbsp;  D E T A I L S 
 </asp:Content>
+
 <asp:Content ID="Content4" ContentPlaceHolderID="maincontent" runat="server">
     <form id="form1" runat="server">
-    <asp:FormView ID="FormView1" runat="server" DataKeyNames="ProductID" DataSourceID="SqlDataSource1" HorizontalAlign="Center">
+    <asp:FormView ID="FormView1" runat="server" DataKeyNames="ProductID" DataSourceID="SqlDataSource1" HorizontalAlign="Center" BorderStyle="Ridge" CellSpacing="-1" Height="371px" style="margin-left: 0px; margin-right: 39px" Width="400px">
         <EditItemTemplate>
             ProductID:
             <asp:Label ID="ProductIDLabel1" runat="server" Text='<%# Eval("ProductID") %>' />
@@ -54,41 +57,45 @@
             &nbsp;<asp:LinkButton ID="InsertCancelButton" runat="server" CausesValidation="False" CommandName="Cancel" Text="Cancel" />
         </InsertItemTemplate>
         <ItemTemplate>
-            <asp:Image ID="CurrentImage" runat="server" ImageUrl='<%# Eval("ImageLink") %>' Width="200px" Height="200px" AlternateText="Winter Jacket Image" /><br />
-            <br />
-            ProductID:
-            <asp:Label ID="ProductIDLabel" runat="server" Text='<%# Eval("ProductID") %>' />
-            <br />
-            ProductName:
-            <asp:Label ID="ProductNameLabel" runat="server" Text='<%# Bind("ProductName") %>' />
-            <br />
-            ProductDetails:
-            <asp:Label ID="ProductDetailsLabel" runat="server" Text='<%# Bind("ProductDetails") %>' />
-            <br />
-            ProductQuantity:
-            <asp:Label ID="ProductQuantityLabel" runat="server" Text='<%# Bind("ProductQuantity") %>' />
-            <br />
-            ProductPrice:
-            <asp:Label ID="ProductPriceLabel" runat="server" Text='<%# Bind("ProductPrice") %>' />
-            <br />
-            <asp:Label ID="lblQuantity" runat="server" Text="Quantity"></asp:Label>
-            <asp:DropDownList ID="ddlQuantity" runat="server" OnSelectedIndexChanged="ddlQuantity_SelectedIndexChanged">
-            <asp:ListItem Selected="True">1</asp:ListItem>
-            <asp:ListItem>2</asp:ListItem>
-            <asp:ListItem>3</asp:ListItem>
-            </asp:DropDownList>
+            <div style="text-align: justify">
+                <asp:Image ID="CurrentImage" runat="server" AlternateText="Winter Jacket Image" Height="200px" ImageAlign="AbsMiddle" ImageUrl='<%# Eval("ImageLink") %>' style="text-align: center" Width="200px" />
+                <br />
+                <br />
+                ProductID:
+                <asp:Label ID="ProductIDLabel" runat="server" Text='<%# Eval("ProductID") %>' />
+                ProductName:
+                <asp:Label ID="ProductNameLabel" runat="server" Text='<%# Bind("ProductName") %>' />
+                <br />
+                ProductDetails:
+                <asp:Label ID="ProductDetailsLabel" runat="server" Text='<%# Bind("ProductDetails") %>' />
+                <br />
+                ProductQuantity:
+                <asp:Label ID="ProductQuantityLabel" runat="server" Text='<%# Bind("ProductQuantity") %>' />
+                <br />
+                ProductPrice:
+                <asp:Label ID="ProductPriceLabel" runat="server" Text='<%# Bind("ProductPrice") %>' />
+                <br />
+                <asp:Label ID="lblQuantity" runat="server" Text="Quantity"></asp:Label>
+                <asp:DropDownList ID="ddlQuantity" runat="server" OnSelectedIndexChanged="ddlQuantity_SelectedIndexChanged">
+                    <asp:ListItem Selected="True">1</asp:ListItem>
+                    <asp:ListItem>2</asp:ListItem>
+                    <asp:ListItem>3</asp:ListItem>
+                </asp:DropDownList>
+            </div>
         </ItemTemplate>
         </asp:FormView>
         <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:db_1626490_co5027_asgConnectionString %>" SelectCommand="SELECT * FROM [tblProduct] WHERE ([ProductID] = @ProductID)">
             <SelectParameters>
                 <asp:QueryStringParameter Name="ProductID" QueryStringField="Id" Type="Int32" />
             </SelectParameters>
-        </asp:SqlDataSource>
-            
+        </asp:SqlDataSource>    
+
+        <asp:Button ID="btnPurchase" runat="server" Text="Buy Now" OnClick="btnPurchase_Click" Height="46px" style="margin-left: 0px" Width="125px" />
         <br />
         <br />
-        <asp:Button ID="btnPurchase" runat="server" Text="Buy Now" OnClick="btnPurchase_Click" />
+
     </form>
 </asp:Content>
+
 <asp:Content ID="Content5" ContentPlaceHolderID="GoogleMap" runat="server">
 </asp:Content>

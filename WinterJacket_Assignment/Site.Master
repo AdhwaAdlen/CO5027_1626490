@@ -7,6 +7,7 @@
     <title>
         <asp:ContentPlaceHolder ID="title" runat="server"></asp:ContentPlaceHolder>
     </title>
+<!----------------------------------This is the CSS LINK------------------------------>
     <link href="~/css/Styles.css" runat="server" rel="stylesheet" type="text/css">
     <meta name="viewport" content="initial-sacle=1.0" />
     <meta charset="utf-8" />
@@ -21,23 +22,16 @@
             padding:0;
         }
     </style>
-    <style></style>
 </head>
-
+<!----This is the page and header----->
 <body runat="server">
     <div id="page">
         <div id="header">
             <h1>
                 <asp:ContentPlaceHolder ID="heading1" runat="server"></asp:ContentPlaceHolder>
-                S P E C I A L  P R O M O T I O N 
-                <br/ />
-                W I N T E R  J A C K E T ' S
-                <br />
-                M I C H A E L  K O R S
-
             </h1>
         </div>
-
+<!------This is the Navigation Bar-------->
     <div id="menu">
         <ul>
             <li><a href="~/Default.aspx" runat="server">HOME</a></li>
@@ -48,7 +42,7 @@
             <li><a href="~/admin/index.aspx" runat="server">ADMIN</a></li>  
         </ul>
     </div>
-
+<!---------This is the main content--------->
     <div id="content">
             <h2>
                 <asp:ContentPlaceHolder ID="heading2" runat="server"></asp:ContentPlaceHolder>
@@ -57,12 +51,15 @@
 
             <asp:ContentPlaceHolder ID="maincontent" runat="server"></asp:ContentPlaceHolder>
     </div>
-
+<!------------This is the footer------------>
     <div id="footer">
-            <p>Copyright @Winter Jacket 2018</p>
+            <p>COPYRIGHT@WINTER JACKET'S 2018</p>
+        <a href="http://validator.w3.org/check?uri=referer">Validate HTML</a>|
+        <a href="http://jigsaw.w3.org//css-validator/check/referer">Validate CSS</a>|
+        <a href="Admin/index.aspx">Admin</a> 
     </div>
-        </div>
-
+    </div>
+<!--------------This is the map-------------->
     <asp:ContentPlaceHolder ID="GoogleMap" runat="server">
     </asp:ContentPlaceHolder>
 </body>

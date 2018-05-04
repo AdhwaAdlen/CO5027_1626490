@@ -33,15 +33,8 @@ namespace WinterJacket_Assignment
 
             //Create credentials - e.g. username and password for the account
             smtpClient.UseDefaultCredentials = false;
-            System.Net.NetworkCredential credentials = new System.Net.NetworkCredential("benny.assignment@gmail.com", "P@55words");
+            System.Net.NetworkCredential credentials = new System.Net.NetworkCredential("Nuradhwaadlen.Sapawi@gmail.com", "22893adlensapawi");
             smtpClient.Credentials = credentials;
-
-            msg.Subject = "Dear " + txtEmail.Text + ", thank you for your feedback!";
-            msg.Body = "Dear " + txtEmail.Text + "( " + txtEmail.Text + " )"
-                + System.Environment.NewLine + ". This is to notify you that we have received your message from our website:"
-                + System.Environment.NewLine + " Message Subject:" + System.Environment.NewLine + txtSubject.Text
-                + System.Environment.NewLine + " Message details: " + System.Environment.NewLine + txtBody.Text;
-
 
             try
             {
