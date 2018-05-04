@@ -2,13 +2,14 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="title" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="heading1" runat="server">
-    Register
+   
 </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="heading2" runat="server">
     Registration Form
 </asp:Content>
 <asp:Content ID="Content4" ContentPlaceHolderID="maincontent" runat="server">
     <form id="form1" runat="server">
+        <br />
         <asp:Label ID="lblUserName" runat="server" Text="UserName"></asp:Label>
         <asp:TextBox ID="txtRegEmail" runat="server"></asp:TextBox>
         <br />

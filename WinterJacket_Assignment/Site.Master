@@ -21,6 +21,7 @@
             padding:0;
         }
     </style>
+    <style></style>
 </head>
 
 <body runat="server">
@@ -28,23 +29,30 @@
         <div id="header">
             <h1>
                 <asp:ContentPlaceHolder ID="heading1" runat="server"></asp:ContentPlaceHolder>
+                S P E C I A L  P R O M O T I O N 
+                <br/ />
+                W I N T E R  J A C K E T ' S
+                <br />
+                M I C H A E L  K O R S
+
             </h1>
         </div>
 
     <div id="menu">
         <ul>
-            <li><a href="~/Default.aspx" runat="server">Home</a></li>
-            <li><a href="~/Product.aspx" runat="server">Product</a></li>
-            <li><a href="~/login.aspx" runat="server">Login</a></li>
-            <li><a href="~/register.aspx" runat="server">Register</a></li>
-            <li><a href="~/contact.aspx" runat="server">Contact Us</a></li>
-            <li><a href="~/admin/index.aspx" runat="server">Admin</a></li>  
+            <li><a href="~/Default.aspx" runat="server">HOME</a></li>
+            <li><a href="~/contact.aspx" runat="server">CONTACT</a></li>
+            <li><a href="~/login.aspx" runat="server">LOGIN</a></li>
+            <li><a href="~/register.aspx" runat="server">REGISTER</a></li>
+            <li><a href="~/Product.aspx" runat="server">PRODUCT</a></li>
+            <li><a href="~/admin/index.aspx" runat="server">ADMIN</a></li>  
         </ul>
     </div>
 
     <div id="content">
             <h2>
                 <asp:ContentPlaceHolder ID="heading2" runat="server"></asp:ContentPlaceHolder>
+                
             </h2>
 
             <asp:ContentPlaceHolder ID="maincontent" runat="server"></asp:ContentPlaceHolder>

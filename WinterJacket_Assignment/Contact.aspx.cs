@@ -21,9 +21,10 @@ namespace WinterJacket_Assignment
 
             //Create mail client and message with to and from address, and set message subject and body 
             SmtpClient smtpClient = new SmtpClient();
+            smtpClient.DeliveryMethod = SmtpDeliveryMethod.Network;
             MailMessage msg = new MailMessage("nuradhwaadlen.sapawi@gmail.com", "nuradhwaadlen.sapawi@gmail.com");
-            msg.Subject = txtSubject.Text;
-            msg.Body = txtBody.Text;
+            MailMessage msgToClient = new MailMessage();
+            
 
             //Settings specific to the mail service, e.g. server location, port number and that ssl is required
             smtpClient.Host = "smtp.gmail.com";
@@ -31,13 +32,25 @@ namespace WinterJacket_Assignment
             smtpClient.EnableSsl = true;
 
             //Create credentials - e.g. username and password for the account
-            System.Net.NetworkCredential credentials = new System.Net.NetworkCredential("nuradhwaadlen.sapawi@gmail.com", "22893adlensapawi");
+            smtpClient.UseDefaultCredentials = false;
+            System.Net.NetworkCredential credentials = new System.Net.NetworkCredential("benny.assignment@gmail.com", "P@55words");
             smtpClient.Credentials = credentials;
+
+            msg.Subject = "Dear " + txtEmail.Text + ", thank you for your feedback!";
+            msg.Body = "Dear " + txtEmail.Text + "( " + txtEmail.Text + " )"
+                + System.Environment.NewLine + ". This is to notify you that we have received your message from our website:"
+                + System.Environment.NewLine + " Message Subject:" + System.Environment.NewLine + txtSubject.Text
+                + System.Environment.NewLine + " Message details: " + System.Environment.NewLine + txtBody.Text;
+
 
             try
             {
                 smtpClient.Send(msg);
                 litResult.Text = "<p>Success, mail sent using SMTP with secure connection and credentials</p>";
+                txtEmail.Text = string.Empty;
+                txtSubject.Text = string.Empty;
+                txtBody.Text = string.Empty;
+
             }
             catch (Exception ex)
             {

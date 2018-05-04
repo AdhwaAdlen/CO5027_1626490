@@ -24,7 +24,6 @@ namespace WinterJacket_Assignment
             var userStore = new UserStore<IdentityUser>(identityDBContext);
             var userManager = new UserManager<IdentityUser>(userStore);
             var user = userManager.Find(txtLoginEmail.Text, txtLoginPassword.Text);
-
             if (user != null)
             {
                 LogUserIn(userManager, user);
@@ -54,8 +53,11 @@ namespace WinterJacket_Assignment
                 {
                     Response.Redirect("~/admin/index.aspx");
                 }
+                else
+                    Response.Redirect("~/Default.aspx");
+                    
+                }
             }
 
         }
     }
-}

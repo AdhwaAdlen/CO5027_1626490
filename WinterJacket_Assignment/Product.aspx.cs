@@ -27,7 +27,7 @@ namespace WinterJacket_Assignment
         {
             DropDownList DDLProductQty = (DropDownList)FormView1.FindControl("ddlQuantity");
             Label productPrice = (Label)FormView1.FindControl("ProductPriceLabel");
-            decimal shippingPackagingCost = 5.00m;
+            decimal shippingPackagingCost = 8.00m;
             int productPrice1;// = (int) productPrice;
             int.TryParse((string)productPrice.Text, out productPrice1);
             int quantityOfProducts = int.Parse(DDLProductQty.SelectedValue);
@@ -60,7 +60,7 @@ namespace WinterJacket_Assignment
             transactionAmount.details = transactionDetails;
 
             var transaction = new Transaction();
-            transaction.description = "Your order from Faber Castell";
+            transaction.description = "Your order from Michael Kors";
             transaction.invoice_number = Guid.NewGuid().ToString(); // this should ideally be the id of a record storing the order
             transaction.amount = transactionAmount;
             transaction.item_list = new ItemList

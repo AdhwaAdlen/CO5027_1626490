@@ -3,10 +3,11 @@
     Winter Jacket
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="heading1" runat="server">
-    Home page
+    L I M I T E D&nbsp;   E D I T I O N 
+    <br />
 </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="heading2" runat="server">
-    Jacket
+    &nbsp;
 </asp:Content>
 <asp:Content ID="Content4" ContentPlaceHolderID="maincontent" runat="server">
     <form id="form1" runat="server">
@@ -20,7 +21,7 @@
                 <div class="span3" style="display:inline-block;" runat="server">
                     <div class="products">
                             <a href="<%#Eval("ProductId","Product.aspx?Id={0}") %>">
-                                <asp:Image ID="Image1" runat="server" ImageUrl='<%#Eval("ImageLink") %>' Width="200px" Height="200px" />
+                                <asp:Image ID="Image1" runat="server" ImageUrl='<%#Eval("ImageLink") %>' Width="200px" Height="200px" AlternateText="Winter Jacket Image" />
                                 <br />
                                 <%#Eval("ProductName") %><p>Price$<%#Eval("ProductPrice") %></p>
                             </a>

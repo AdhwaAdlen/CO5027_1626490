@@ -8,7 +8,7 @@
 </asp:Content>
 <asp:Content ID="Content4" ContentPlaceHolderID="maincontent" runat="server">
     <form id="form1" runat="server">
-    <asp:FormView ID="FormView1" runat="server" DataKeyNames="ProductID" DataSourceID="SqlDataSource1">
+    <asp:FormView ID="FormView1" runat="server" DataKeyNames="ProductID" DataSourceID="SqlDataSource1" HorizontalAlign="Center">
         <EditItemTemplate>
             ProductID:
             <asp:Label ID="ProductIDLabel1" runat="server" Text='<%# Eval("ProductID") %>' />
@@ -54,7 +54,7 @@
             &nbsp;<asp:LinkButton ID="InsertCancelButton" runat="server" CausesValidation="False" CommandName="Cancel" Text="Cancel" />
         </InsertItemTemplate>
         <ItemTemplate>
-            <asp:Image ID="CurrentImage" runat="server" ImageUrl='<%# Eval("ImageLink") %>' Width="200px" Height="200px" /><br />
+            <asp:Image ID="CurrentImage" runat="server" ImageUrl='<%# Eval("ImageLink") %>' Width="200px" Height="200px" AlternateText="Winter Jacket Image" /><br />
             <br />
             ProductID:
             <asp:Label ID="ProductIDLabel" runat="server" Text='<%# Eval("ProductID") %>' />
@@ -70,11 +70,6 @@
             <br />
             ProductPrice:
             <asp:Label ID="ProductPriceLabel" runat="server" Text='<%# Bind("ProductPrice") %>' />
-            <br />
-
-            ImageLink:
-            <asp:Label ID="ImageLinkLabel" runat="server" Text='<%# Bind("ImageLink") %>' />
-            <br />
             <br />
             <asp:Label ID="lblQuantity" runat="server" Text="Quantity"></asp:Label>
             <asp:DropDownList ID="ddlQuantity" runat="server" OnSelectedIndexChanged="ddlQuantity_SelectedIndexChanged">

@@ -9,7 +9,8 @@
 <asp:Content ID="Content4" ContentPlaceHolderID="maincontent" runat="server">
 
     <form id="form1" runat="server">
-        <asp:FormView ID="FormView1" runat="server" DataKeyNames="ProductID" DataSourceID="SqlDataSource1" DefaultMode="Insert">
+        <br />
+        <asp:FormView ID="FormView1" runat="server" DataKeyNames="ProductID" DataSourceID="SqlDataSource1" DefaultMode="Insert" HorizontalAlign="Center">
             <EditItemTemplate>
                 ProductID:
                 <asp:Label ID="ProductIDLabel1" runat="server" Text='<%# Eval("ProductID") %>' />
